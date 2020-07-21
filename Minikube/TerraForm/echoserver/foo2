@@ -1,0 +1,14 @@
+Name:                     terraform-example
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 App=myExampleApp
+Type:                     NodePort
+IP:                       10.100.146.189
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  30201/TCP
+Endpoints:                <none>
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>

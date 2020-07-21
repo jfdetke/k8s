@@ -1,0 +1,14 @@
+Name:                     terraform-example
+Namespace:                default
+Labels:                   test=MyExampleApp
+Annotations:              <none>
+Selector:                 test=MyExampleApp
+Type:                     LoadBalancer
+IP:                       10.105.153.94
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  31604/TCP
+Endpoints:                172.17.0.7:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>

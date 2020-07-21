@@ -2,6 +2,26 @@ provider "kubernetes" {
   config_context_cluster   = "minikube"
 }
 
+//resource "kubernetes_service" "terraform-example" {
+//  metadata {
+//    name = "terraform-example"
+//  }
+//  spec { 
+//
+//    selector = { 
+//    App = "myExampleApp"
+//    }
+//
+//    port  {
+//      port        = 8080    // other pods can reach this port
+//      node_port   = 30201   // exposed externally to the cluster
+//      target_port = 8080    // port service on container listens to
+//    }
+//
+//    type = "NodePort"
+//  }
+//}
+
 resource "kubernetes_deployment" "example" {
   metadata {
     name = "terraform-example"
