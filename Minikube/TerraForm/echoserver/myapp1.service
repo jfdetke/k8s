@@ -1,0 +1,14 @@
+Name:                     myapp1
+Namespace:                default
+Labels:                   <none>
+Annotations:              <none>
+Selector:                 App=myapp1
+Type:                     NodePort
+IP:                       10.99.104.72
+Port:                     <unset>  80/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  31679/TCP
+Endpoints:                172.17.0.6:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
