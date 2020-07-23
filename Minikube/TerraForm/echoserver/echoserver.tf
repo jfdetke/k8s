@@ -50,6 +50,10 @@ resource "kubernetes_deployment" "example" {
         container {
           image = "k8s.gcr.io/echoserver:1.4"
           name  = "example"
+         
+          port {
+            container_port = 8080
+          }
 
           resources {
             limits {
