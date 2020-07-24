@@ -1,20 +1,20 @@
 provider "kubernetes" {
-  config_context_cluster   = "minikube"
+  config_context_cluster = "minikube"
 }
 
 resource "kubernetes_service" "terraform-example" {
   metadata {
     name = "terraform-example"
   }
-  spec { 
+  spec {
 
-    selector = { 
-    App = "myExampleApp"
+    selector = {
+      App = "myExampleApp"
     }
 
-    port  {
-      port        = 80    // other pods can reach this port
-      target_port = 8080    // port service on container listens to
+    port {
+      port        = 80   // other pods can reach this port
+      target_port = 8080 // port service on container listens to
     }
 
     type = "NodePort"
@@ -49,7 +49,7 @@ resource "kubernetes_deployment" "example" {
         container {
           image = "k8s.gcr.io/echoserver:1.4"
           name  = "example"
-         
+
           port {
             container_port = 8080
           }
