@@ -1,5 +1,5 @@
 provider "kubernetes" {
-  config_context_cluster   = "minikube"
+  config_context_cluster = "minikube"
 }
 
 # In kubernetes, you can deploy with different type of objects
@@ -18,7 +18,7 @@ resource "kubernetes_pod" "myapp1" {
     container {
       image = "myapp:0.1"
       //image = "k8s.gcr.io/echoserver:1.4"
-      name  = "myapp1"
+      name = "myapp1"
 
       port {
         container_port = 8080
@@ -35,7 +35,7 @@ resource "kubernetes_service" "example-service" {
   }
   spec {
     selector = {
-        App = kubernetes_pod.myapp1.metadata[0].labels.App
+      App = kubernetes_pod.myapp1.metadata[0].labels.App
     }
     port {
       port        = 80
