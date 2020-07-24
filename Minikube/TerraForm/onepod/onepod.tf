@@ -1,5 +1,5 @@
 provider "kubernetes" {
-  config_context_cluster   = "minikube"
+  config_context_cluster = "minikube"
 }
 
 resource "kubernetes_pod" "mypod1" {
