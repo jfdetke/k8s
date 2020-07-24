@@ -16,8 +16,8 @@ resource "kubernetes_pod" "myapp1" {
 
   spec {
     container {
-      //image = "myapp:0.1"
-      image = "k8s.gcr.io/echoserver:1.4"
+      image = "myapp:0.1"
+      //image = "k8s.gcr.io/echoserver:1.4"
       name  = "myapp1"
 
       port {
@@ -29,9 +29,9 @@ resource "kubernetes_pod" "myapp1" {
 
 # Let's create a Service object - in simple words, this object helps
 # you with loadbalancing and network abstraction on top of pods
-resource "kubernetes_service" "myapp1" {
+resource "kubernetes_service" "example-service" {
   metadata {
-    name = "myapp1"
+    name = "example-service"
   }
   spec {
     selector = {
